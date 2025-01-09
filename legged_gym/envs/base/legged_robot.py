@@ -740,3 +740,6 @@ class LeggedRobot(BaseTask):
         target = self.target_dof_pos * alphas + self.default_dof_pos * (1-alphas)
         error = torch.sum(torch.square(target - actual), dim=1)
         return torch.exp(-error / self.cfg.rewards.tracking_sigma / self.num_dofs)
+    
+    def _reward_alive(self):
+        return 1

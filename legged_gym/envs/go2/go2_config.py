@@ -77,10 +77,11 @@ class GO2RoughCfg( LeggedRobotCfg ):
             dof_vel = -0.005
             dof_acc =  -0.000001
             dof_pos_limits = -30.0
-            FR = 20
-            dof_vel_limits = -0.5
+            FR = 30
+            alive = 5
+            dof_vel_limits = -5
         
-        soft_dof_vel_limit = 0.02
+        soft_dof_vel_limit = 0.01739531561
 
 class GO2RoughCfgPPO( LeggedRobotCfgPPO ):
     class algorithm( LeggedRobotCfgPPO.algorithm ):
